@@ -13,7 +13,13 @@ export default {
   name: "Register",
   setup() {
     const store = useStore();
+    console.log(store.state.register);
     console.log(store.getters.getList);
+    console.log(store);
+    store.commit("login/setList", [3, 2, 1]);
+    console.log(store.state, "abbc");
+    console.log(store.state.register);
+    console.log(store.state.login);
 
     return {};
   },
